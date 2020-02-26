@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import BookList from '../components/bookList';
+import axios from "axios";
 
 const HomeStyle = {
   display: 'flex',
@@ -7,18 +9,32 @@ const HomeStyle = {
   justifyContent: 'center',
 };
 
-const Home = ({ match }) => (
-  <div style={HomeStyle}>
-    <h1>
-      Welcome!
-    </h1>
-    {(match.params.testRouting) && (
-      <p>
-        {match.params.testRouting}
-      </p>
-    )}
-  </div>
-);
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { books: [] };
+  }
+
+  componentDidMount() {
+    axios.get('https://my-json-server.typicode.com/0plus1/CodingChallenge-react/books')
+      .then(response => {
+        const books = response.data;
+        this.setState({ books });
+      })
+  }
+
+  render() {
+    const match = this.props.match;
+    return (
+      <div style={HomeStyle}>
+        <div>
+          <BookList books={this.state.books} />
+        </div>
+        {match.params.testRouting && <p>{match.params.testRouting}</p>}
+      </div>
+    );
+  }
+}
 
 Home.propTypes = {
   match: PropTypes.shape({
