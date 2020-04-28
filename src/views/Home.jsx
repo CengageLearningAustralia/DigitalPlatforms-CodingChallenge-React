@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import BookContainer from './BookContainer';
 
 const HomeStyle = {
   display: 'flex',
@@ -8,15 +9,18 @@ const HomeStyle = {
 };
 
 const Home = ({ match }) => (
-  <div style={HomeStyle}>
-    <h1>
-      Welcome!
-    </h1>
-    {(match.params.testRouting) && (
-      <p>
-        {match.params.testRouting}
-      </p>
-    )}
+  <div>
+    <div style={HomeStyle}>
+      <h1>
+        Welcome!
+      </h1>
+      {(match.params.testRouting) && (
+        <p>
+          {match.params.testRouting}
+        </p>
+      )}
+    </div>
+    <BookContainer style={HomeStyle}/>
   </div>
 );
 

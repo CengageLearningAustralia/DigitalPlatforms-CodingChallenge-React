@@ -4,6 +4,7 @@
   "description": "Coding Challenge for React developers",
   "private": false,
   "dependencies": {
+    "axios": "^0.19.2",
     "env-cmd": "^9.0.3",
     "history": "^4.9.0",
     "prop-types": "^15.6.2",
@@ -16,13 +17,19 @@
     "sanitize.css": "^10.0.0"
   },
   "devDependencies": {
+    "@material-ui/core": "^4.9.12",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.24.1",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "require": "^2.4.20"
   },
   "scripts": {
     "start": "react-scripts start",
