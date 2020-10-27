@@ -8,11 +8,11 @@
     "history": "^4.9.0",
     "prop-types": "^15.6.2",
     "query-string": "^6.7.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "3.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.0.1",
     "sanitize.css": "^10.0.0"
   },
   "devDependencies": {
